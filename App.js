@@ -9,7 +9,8 @@ import {
   SafeAreaView,
   Button,
   Pressable} from 'react-native';
-import bolo from './assets/bolo.PNG';
+import Item from './src/components/item.js';
+import bolo from './assets/bolo.png';
 import bolomilho from './assets/bolomilho.png';
 import bolofofo from './assets/bolofofo.png';
 import bolomorango from './assets/bolomorango.png';
@@ -18,20 +19,35 @@ export default function App() {
   
   return (
     <SafeAreaView>
-    <View style={styles.container}>
-      <Text style = {styles.firstTexto}> Casa do Bolo</Text>
-      <Text style = {styles.twoTexto}> Escolha a opcao desejada </Text>
-      <Text style = {styles.threTexto}> 1- Chocolate </Text>  
-      <Image source = {bolo} style = {styles.foto}/>      
-      <Text style = {styles.fourTexto}> 2- Milho </Text>
-      <Image source = {bolomilho} style = {styles.fototwo}/>  
-      <Text style = {styles.fiveTexto}> 3- Fofo </Text>
-      <Image source = {bolofofo} style = {styles.fotothre}/>  
-      <Text style = {styles.sixTexto}> 4- Morango </Text>
-      <Image source = {bolomorango} style = {styles.fotofour}/> 
 
-      <StatusBar style="auto" />
-    </View>
+      <View style={styles.container}>
+        <Text style={styles.firstTexto}> Casa do Bolo</Text>
+        <Text style={styles.twoTexto}> Escolha a opcao desejada </Text>
+
+        <Item texto="bolo de cholate" />
+
+        {/* <View> 
+          <Text style={styles.threTexto}> 1- Chocolate </Text>
+          <Image source={bolo} style={styles.foto} />
+        </View> */}
+
+        <View>
+          <Text style={styles.fourTexto}> 2- Milho </Text>
+          <Image source={bolomilho} style={styles.fototwo} />
+        </View>
+
+        <View>
+          <Text style={styles.fiveTexto}> 3- Fofo </Text>
+          <Image source={bolofofo} style={styles.fotothre} />
+        </View>
+
+        <View>
+          <Text style={styles.sixTexto}> 4- Morango </Text>
+          <Image source={bolomorango} style={styles.fotofour} />
+        </View>
+
+        <StatusBar style="auto" />
+      </View>
     </SafeAreaView>
   );
 }
@@ -72,6 +88,12 @@ const styles = StyleSheet.create({
   },
   fiveTexto : {
     color : 'malt',
+    fontSize : 22,
+    height : 40,
+    fontWeight: 'bold',
+  },
+  sixTexto : {
+    color : 'red',
     fontSize : 22,
     height : 40,
     fontWeight: 'bold',
