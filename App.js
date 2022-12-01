@@ -21,15 +21,15 @@ export default function App() {
     <SafeAreaView>
 
       <View style={styles.container}>
-        <Text style={styles.firstTexto}> Casa do Bolo</Text>
-        <Text style={styles.twoTexto}> Escolha a opcao desejada </Text>
+        <Text style={styles.firstTexto}> Cardápio </Text>
+        <Text style={styles.twoTexto}> Opções </Text>
 
-        <Item texto="bolo de cholate" />
+      /* Item texto="bolo de cholate" */
 
-        {/* <View> 
+        { <View> 
           <Text style={styles.threTexto}> 1- Chocolate </Text>
           <Image source={bolo} style={styles.foto} />
-        </View> */}
+        </View> }
 
         <View>
           <Text style={styles.fourTexto}> 2- Milho </Text>
@@ -64,14 +64,14 @@ const styles = StyleSheet.create({
     color : 'blue',
     fontSize : 22,
     height : 50,
-    fontWeight: 'bold',
+    fontWeight: 'center',
     textDecorationLine: 'underline',
   },
   twoTexto : {
     color : 'black',
     fontSize : 22,
     height : 40,
-    fontWeight: 'bold',
+    fontWeight: 'center',
     textDecorationLine: 'underline',
   },
   threTexto : {

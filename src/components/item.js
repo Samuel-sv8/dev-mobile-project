@@ -3,6 +3,8 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {StyleSheet,Text,View,Image} from 'react-native';
 
+
+
 export default function Item(props) {
 const {texto } = props
   
@@ -10,7 +12,6 @@ const {texto } = props
 
       <View>
           <Text> {texto} </Text>
-          {/* <Image src = {imagem}> </Image> */}
       </View>
     
   );
